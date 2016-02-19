@@ -29,16 +29,16 @@ atom-pane-container {
 
 // Inactive Pane
 atom-pane:not(.active) {
-  opacity: 0.8;
+  opacity: 0.9;
 
   atom-text-editor {
     background-color: lighten(@app-background-color, 2%);
   }
 
   tabs-tab.active, .tab.active {
-    border-bottom: solid 4px darken(@tab-highlight-color, 20%);
+    border-bottom: solid 2px darken(@tab-highlight-color, 20%);
     &:before {
-      border-bottom: solid 4px darken(@tab-highlight-color, 20%);
+      border-bottom: solid 2px darken(@tab-highlight-color, 20%);
     }
   }
 }

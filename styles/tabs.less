@@ -1,5 +1,6 @@
 @modified-icon-width: 8px;
-
+@act-tab-border-height: 2px;
+@tab-font-size: 9px;
 @tab-border: none;
 
 @tab-highlight-color: rgb(79,153,211);
@@ -8,7 +9,8 @@
 @tab-bar-bottom-border-color: rgb(16,17,18);
 @tab-bar-background-color: rgb(38,43,48);
 
-@tab-height: 40px;
+//@tab-height: 40px;
+@tab-height: 34px;
 @tab-top-padding: 0px;
 @tab-bottom-border-height: 0px;
 
@@ -16,7 +18,8 @@ tabs-bar, .tab-bar {
   height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
   background: @tab-bar-background-color;
   box-sizing: border-box;
-  border-bottom: solid 4px @tab-bar-bottom-border-color;
+  //border-bottom: solid 4px @tab-bar-bottom-border-color;
+  border-bottom: solid @act-tab-border-height @tab-bar-bottom-border-color;
   // left: 16px;
 
   &:after {
@@ -35,7 +38,8 @@ tabs-bar, .tab-bar {
     height: @tab-height;
     line-height: @tab-height;
     color: @text-color;
-    padding-left: 15px;
+    //padding-left: 15px;
+    padding-left: 10px;
     border-radius: 0;
     box-shadow: none;
     -webkit-transform: none;
@@ -43,9 +47,11 @@ tabs-bar, .tab-bar {
     box-shadow: none;
     border-radius: 0;
     border: none;
-    border-bottom: solid 4px @tab-bar-bottom-border-color;
+    //border-bottom: solid 4px @tab-bar-bottom-border-color;
+    border-bottom: solid @act-tab-border-height @tab-bar-bottom-border-color;
     border-right: solid 1px @tab-bar-bottom-border-color;
     background: @tab-background;
+    font-size: @tab-font-size;
 
     .close-icon {
       z-index: 3;
@@ -55,7 +61,8 @@ tabs-bar, .tab-bar {
       margin-top: -3px;
 
       &:hover {
-        color: inherit;
+        //color: inherit;
+        color: #FF0000;
       }
     }
     &.modified:not(:hover) .close-icon {
@@ -66,7 +73,8 @@ tabs-bar, .tab-bar {
     }
 
     &.modified:hover .close-icon:hover {
-      color: @text-color-highlight;
+      //color: @text-color-highlight;
+      color: #FF0000;
     }
 
     .title{
@@ -85,9 +93,11 @@ tabs-bar, .tab-bar {
     color: @text-color-highlight;
     box-shadow: none;
     border: none;
-    border-bottom: solid 4px @tab-highlight-color;
+    //border-bottom: solid 4px @tab-highlight-color;
+    border-bottom: solid @act-tab-border-height @tab-highlight-color;
     background: @tab-background-active;
     height: @tab-height + 0px;
+    font-size: @tab-font-size;
 
     .title{
       position: relative;
@@ -108,7 +118,8 @@ tabs-bar, .tab-bar {
 
     &:before {
       border: none;
-      border-bottom: solid 4px @tab-highlight-color;
+      //border-bottom: solid 4px @tab-highlight-color;
+      border-bottom: solid @act-tab-border-height @tab-highlight-color;
       box-shadow: none;
     }
 
@@ -123,7 +134,8 @@ tabs-bar, .tab-bar {
     color: @text-color;
 
     &:hover {
-      color: inherit;
+      //color: inherit;
+      color: #FF0000;
     }
   }
 
